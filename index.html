@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- JAVASCRIPT -->
+    <script src="./js/app.js" defer></script>
+</head>
+<body>
+    <main>
+        <!-- START BUTTON -->
+        <section class="start-section">
+            <button class="start-btn">START GAME</button>
+        </section>
+        
+        <div id="center-content">            
+            <!-- STATS DISPLAY -->
+            <section class="display-stats">
+                <h2 class="hunger-stats-display stat">HUNGER: 0</h2>
+                <h2 class="boredom-stats-display stat">BOREDOM: 0</h2>
+                <h2 class="sleepiness-stats-display stat">SLEEPINESS: 0</h2>
+            </section>
+
+            <!-- CHARACTER -->
+            <div class="character-div">
+                <img src="/assets/main-panda.gif" class="tamagotchi-char" alt="panda-avatar">
+                <img src="/assets/background.jpg" class="tamagotchi-background" alt="bamboo-container">
+            </div>
+
+            <!-- INTERACT BUTTONS -->
+            <section class="tamagotchi-buttons">
+                <button class="feed"><img src="/assets/mockup-assets/feed.png" alt="apple-icon"> FEED</button>
+                <button class="play"><img src="/assets/mockup-assets/play.png" alt="heart-icon"> PLAY</button>
+                <button class="lights-out"><img src="/assets/mockup-assets/lights.png" alt="lightbulb-icon">LIGHTS OUT</button>
+            </section>
+        </div>
+
+        <!-- NAME/AGE/TIME DISPLAY -->
+        <section class="name-age-display-section">
+            <h2 class="name-stats-display">NAME: </h2>
+            <h2 class="age-stats-display">AGE: 0</h2>
+            <h2 id="timer">TIME: 0</h2>
+        </section>
+
+        <!-- GROUND -->
+        <section class="ground">
+            <img src="/assets/mockup-assets/ground.png" alt="ground-design">
+        </section>
+    </main>
+</body>
+</html>

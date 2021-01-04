@@ -1,0 +1,181 @@
+:root {
+    --hunger: #fdadbf;
+    --boredom: #a08dd6;
+    --sleepiness: #e3ce5b;
+    --namestats: #8a8a8a;
+}
+
+* {
+	outline: none;
+}
+
+/* @media (max-width: 480px) {
+
+    .tamagotchi-background {
+        width: 250px;
+        height: 150px;
+        border: 4px solid #64caf4;
+    }
+
+    .tamagotchi-char {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+} */
+
+body {
+    font-family: 'Concert One', cursive;
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 2px;
+}
+
+main {
+    width: 1000px;
+    height: 1000px;
+    background-image: url('/assets/mockup-assets/clouds.png');
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.start-section {
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.start-btn {
+    background-color: #4eb982;
+    padding-bottom: 30px;
+}
+
+#center-content {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.display-stats {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.stat {
+    height: 30px;
+}
+
+.character-div {
+    height: 300px;
+    position: relative;
+    display: flex;
+}
+
+.tamagotchi-background {
+    border: 10px solid #64caf4;
+    border-radius: 5px;
+}
+
+.tamagotchi-char {
+    position: absolute;
+    top: 135px;
+    left: 180px;
+    height: 100px;
+    width: 100px;
+}
+
+.hunger-stats-display {
+    color: var(--hunger);
+}
+
+.sleepiness-stats-display {
+    color: var(--sleepiness);
+}
+
+.boredom-stats-display {
+    color: var(--boredom);
+}
+
+/* .hunger-num {
+    border: 2px solid var(--hunger);
+    border-radius: 5px;
+    padding: 0 20px 8px 20px;
+}
+
+.bored-num {
+    border: 2px solid var(--boredom);
+    padding: 0 20px 8px 20px;
+    border-radius: 5px;
+}
+
+.sleepy-num {
+    border: 2px solid var(--sleepiness);
+    padding: 0 20px 8px 20px;
+    border-radius: 5px;
+} */
+
+.tamagotchi-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+button {
+    color: white;
+    font-size: 27px;
+    font-family: 'Concert One';
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.feed {
+    background-color: var(--hunger);
+}
+
+.play {
+    background-color: var(--boredom);
+}
+
+.lights-out {
+    background-color: var(--sleepiness);
+}
+
+.lights-out-toggle {
+    background-color: black;
+    color: white;
+}
+
+.name-age-display-section {
+    color: var(--namestats);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+/* .name-stat-border {
+    border: 2px solid var(--namestats);
+    padding: 0 3px 8px 3px;
+    border-radius: 5px;
+} */
+
+.ground {
+    position: absolute;
+    bottom: 0;
+}
