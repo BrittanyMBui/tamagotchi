@@ -41,7 +41,7 @@ body {
 main {
     width: 1000px;
     height: 1000px;
-    background-image: url('assets/mockup-assets/clouds.png');
+    background-image: url('../assets/mockup-assets/clouds.png');
     background-repeat: no-repeat;
     position: relative;
 }
