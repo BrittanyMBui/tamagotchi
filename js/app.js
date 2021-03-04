@@ -22,9 +22,9 @@ let boredom = 0;
 let age = 0;
 
 // SOUND EFFECTS
-const eatSound = new Audio('assets/eat.mp3');
-const giggle = new Audio('assets/giggle.mp3');
-const snore = new Audio('assets/snore.mp3');
+const eatSound = new Audio('../assets/eat.mp3');
+const giggle = new Audio('../assets/giggle.mp3');
+const snore = new Audio('../assets/snore.mp3');
 
 // TAMAGOTCHI VARIABLE
 const tama = $('.tamagotchi-char');
@@ -52,15 +52,15 @@ function incrementStats() {
 function alertCritStats() {
     if (hunger >= 5) {
         $('.hunger-stats-display').css('color', 'red');
-        $(tama).attr('src', 'assets/hungry-panda.gif');
+        $(tama).attr('src', '../assets/hungry-panda.gif');
     } else if (sleepiness >= 6){
         $('.sleepiness-stats-display').css('color', 'red');
-        $(tama).attr('src', 'assets/tired-panda.gif');
+        $(tama).attr('src', '../assets/tired-panda.gif');
     } else if (boredom >= 7) {
         $('.boredom-stats-display').css('color', 'red');
-        $(tama).attr('src', 'assets/bored-panda.gif');
+        $(tama).attr('src', '../assets/bored-panda.gif');
     } else {
-        $(tama).attr('src', 'assets/main-panda.gif');
+        $(tama).attr('src', '../assets/main-panda.gif');
         $('.hunger-stats-display').css('color', '#fdadbf');
         $('.sleepiness-stats-display').css('color', '#e3ce5b');
         $('.boredom-stats-display').css('color', '#a08dd6');
@@ -82,14 +82,14 @@ function startTimer() {
         // SUDDEN DEATH
         if (hunger === 10 || boredom === 10 || sleepiness === 10) {
             clearInterval(counter);
-            $(tama).attr('src', 'assets/you-died.gif');
+            $(tama).attr('src', '../assets/you-died.gif');
             window.alert(`Your pet is DEAD.`);
         }
 
         // YOU'RE OLD
         if (age >= 20) {
             clearInterval(counter);
-            $(tama).attr('src', 'assets/old-panda.gif');
+            $(tama).attr('src', '../assets/old-panda.gif');
             window.alert('Your pet is now elderly and will be taken to a home. Goodbye.')
         }
         
@@ -104,38 +104,38 @@ const lightsOut = $('.lights-out');
 
 feedBtn.on('click', function() {
     eatSound.play();
-    $(tama).attr('src', 'assets/eating-panda2.gif');
+    $(tama).attr('src', '../assets/eating-panda2.gif');
     if (hunger > 0) {
         hunger--;
         renderStats();
     }
     if (hunger === 0) {
-        $(tama).attr('src', 'assets/main-panda.gif')
+        $(tama).attr('src', '../assets/main-panda.gif')
     }
 });
 
 playBtn.on('click', function() {
     giggle.play();
-    $(tama).attr('src', 'assets/playing-panda.gif');
+    $(tama).attr('src', '../assets/playing-panda.gif');
     if (boredom > 0) {
         boredom--;
         renderStats();
     }
     if (boredom === 0) {
-        $(tama).attr('src', 'assets/main-panda.gif')
+        $(tama).attr('src', '../assets/main-panda.gif')
     }
 });
 
 lightsOut.on('click', function() {
     snore.play();
     $('body').toggleClass('lights-out-toggle');
-    $(tama).attr('src', 'assets/sleeping-panda.gif');
+    $(tama).attr('src', '../assets/sleeping-panda.gif');
     if (sleepiness > 0) {
         sleepiness--;
         renderStats();
     }
     if (sleepiness === 0) {
-        $(tama).attr('src', 'assets/main-panda.gif')
+        $(tama).attr('src', '../assets/main-panda.gif')
     }
 });
 
